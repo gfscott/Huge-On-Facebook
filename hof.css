@@ -1,0 +1,122 @@
+body {
+	margin: 80px auto;
+	width: 600px;
+	font-family: sans-serif;
+	background: #F2F2F2;
+	}
+
+header {
+	display: block;
+	padding-bottom: 20px;
+	border-bottom: solid 1px #ddd;
+	margin-bottom: 40px;
+	}
+
+h1, h2, h3, h4 {
+	color: #777;
+	}
+
+h1 a {
+	color: #777;
+	text-decoration: none;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s
+	}
+	
+	h1 a:hover {
+		color: #D00;
+		}
+
+p { 
+	margin-bottom: 20px;
+	}
+
+p, li {
+	font-size: 13px;
+	color: #444;
+	line-height: 17px;
+	}
+
+	p code, li code {
+		font-family: monospace;
+		color: blue;
+		}
+
+a.download {
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #444;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	}
+	
+	a.download:hover {
+		color: #D00;
+		}
+	
+	.download span {
+		font-weight: bold;
+		color: #999;
+		}
+
+
+ul#headlines {
+	margin: 20px;
+	padding: 20px;
+	list-style:none;
+	background: #FFF;
+	border: solid 1px #ccc;
+	}
+	
+	ul#headlines li {
+		display: block;
+		clear: both;
+		border-bottom: solid 1px #CCC;
+		overflow: hidden;
+		}
+	
+a.article {
+	display: block;
+	padding: 10px 0;
+	color: #444;
+	font-weight: bold;
+	font-size: 18px;
+	text-decoration: none;
+	-webkit-transition-duration: 0.2s;
+	}
+	
+	a.article:hover {
+		color: #0086C0;
+		}
+
+span.likeNumber {
+	margin-left: 20px;
+	margin-top: -3px;
+	padding: 3px 6px;
+	background: #DDD;
+	color: #444;
+	-webkit-border-radius: 4px;
+	}
+
+	span.likeNumber:after {
+			content: " likes";
+			}
+
+a.HugeOnFacebook {
+	font-size: 24px;
+	}
+
+a.HugeOnFacebook span {
+	color: #fff;
+	background: #D00;
+	font-size: 18px;
+	}
+	
+	span.likeNumber:after {
+		content: " likes";
+		}
+	
+	a.HugeOnFacebook span.likeNumber:after {
+		content: " likes!"
+		}

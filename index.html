@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Huge on Facebook</title>
+	
+	<link rel="stylesheet" type="text/css" href="hof.css" media="all">
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	
+	<script type="text/javascript"> 
+	 
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-542016-5']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+	</script>
+	
+	
+</head>
+<body>
+
+<header>
+<h1><a href="http://gfscott.com" title="Graham F. Scott">gfscott.com</a> // Huge On Facebook</h1>
+<p>A jQuery plugin to display the number of Facebook "Likes" for any given list of links. </p>
+<ul>
+<li><a href="hof.js" title="Download Huge On Facebook" class="download">Download commented version <span>(~3kb)</span></a></li>
+<li><a href="hof.min.js" title="Download Huge On Facebook, minified version" class="download">Download (somewhat) minified version <span>(~1kb)</span></a></li>
+</ul>
+</header>
+
+<p><strong>Huge On Facebook</strong> is something I made because I wanted to be able to highlight the most popular articles on my magazine's website. We were displaying lots of links to articles, but each appeared identical, regardless of how much buzz the story was generating. This jQuery plugin is designed to highlight the links on our site that are actually generating conversation (on Facebook, at least) and boost them visually so that readers can easily find them &mdash; and, crucially, click on them.</p>
+<p>The Huge On Facebook plugin will traverse through a batch of links, fetch the Open Graph data for each URL, and output a new <code>&lt;span&gt;</code> element containing the number of likes for that URL.</p>
+<p>The plugin can additionally be set to display that number <em>only</em> if it's above a certain threshold, and to optionally add a class <code>.HugeOnFacebook</code> to each link&mdash;depending on how popular that link is. You get to decide how many shares is enough to bother showing your website visitor.</p>
+
+
+<h3>Example:</h3>
+
+<p>Below, we have an unordered list of six links: <code>ul#headlines &gt; li &gt; a.article</code></p>
+<p>Add <code>&lt;script type="text/javascript" src="hof.js"&gt;&lt;/script&gt;</code> to the page and it will fetch the number of likes for any batch of links you specify.</p>
+<p>The script appends <code>&lt;span class="likeNumber"&gt;&lt;/span&gt;</code> inside each link in the list with more than 20 likes.</p>
+<p>Additionally, it adds the class <code>.HugeOnFacebook</code> to each link with more than 50 likes.</p>
+<p>CSS rules style each type of link differently. CSS <code>content:</code> styles are used to add additional contextual information to the number of likes. In this case, anything with more than 20 likes displays its number. Anything with more than 50 gets a slightly bigger text size and is highlighted in red.</p>
+
+<h3>Here it is in action:</h3>
+
+<ul id="headlines">
+	<li><a href="http://this.org/magazine/2011/03/01/first-nations-water/" class="article">The First Link</a></li>
+	<li><a href="http://this.org/magazine/2011/02/25/review-not-yet-wayson-choy/" class="article">Another Link</a></li>
+	<li><a href="http://this.org/magazine/2011/02/24/environmentally-friendly-kitty-litter/" class="article">More Linkage awesomeness</a></li>
+	<li><a href="http://this.org/magazine/2011/02/18/hot-dogg/" class="article">Yet another link</a></li>
+	<li><a href="http://this.org/blog/2011/03/09/attack-ads-canada/" class="article">Penultimate link</a></li>
+	<li><a href="http://en.wikipedia.org/wiki/Rickrolling" class="article">Last link</a></li>
+</ul>
+
+
+<h3>To Do:</h3>
+<ul>
+	<li>Test against earlier versions of jQuery</li>
+	<li>Browser compatibility?</li>
+	<li>Any security vulnerabilities introduced with this technique?</li>
+	<li>Add capability for more than one #container in a page</li>
+	<li>Remove options from main code, shift to a second <code>&lt;script&gt;</code> snippet, probably.</li>
+</ul>
+
+<h3>About:</h3>
+<p>Copyright &copy; 2011 <a href="http://gfscott.com" title="Graham F. Scott">Graham F. Scott</a>, licensed under the <a href="http://www.opensource.org/licenses/mit-license">MIT License</a>. Comment welcome at gfscott at gmail. Oh, and no hotlinking, please.</p>
+
+
+<script type="text/javascript" src="hof.min.js"></script>
+</body>
+</html>
