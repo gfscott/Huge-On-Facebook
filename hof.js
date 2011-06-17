@@ -27,6 +27,7 @@ linkList.each(function(){ // Cycle through each specified link
 	
 	var openGraph = 'http://graph.facebook.com/'; // Open Graph url base
 	var url = $(this).attr('href');	// The url being evaluated
+	url = url.replace(/\?.*/, ""), // Remove any URL arguments to prevent things like UTM analytics tags from interfering. Introduced in version 1.1
 	var ogUrl = openGraph + url + '?callback=?'; // Combine the Open Graph url base, the page url, and the necessary jsonp callback 
 	var self = $(this); // The link element to be updated with the likeNumber
 	
