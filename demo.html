@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Huge on Facebook</title>	
+	
+	<!-- CSS is completely customizable. You don't need this file to make it work. -->
+	<link rel="stylesheet" type="text/css" href="hof.css" media="all">
+
+</head>
+<body>
+
+<p style="text-align:center;">View Source for more details...</p>
+
+
+<ul id="headlines">	
+	<!-- The script needs to know the .class of the links to work on. In this case, they are "a.article" -->
+	<li><a href="http://this.org/magazine/2011/03/01/first-nations-water/" class="article">The First Link</a></li>
+	<li><a href="http://this.org/magazine/2011/02/25/review-not-yet-wayson-choy/" class="article">Another Link</a></li>
+	<li><a href="http://this.org/magazine/2011/02/24/environmentally-friendly-kitty-litter/" class="article">More Linkage awesomeness</a></li>
+	<li><a href="http://this.org/magazine/2011/02/18/hot-dogg/" class="article">Yet another link</a></li>
+	<li><a href="http://this.org/blog/2011/03/09/attack-ads-canada/" class="article">Penultimate link</a></li>
+	<li><a href="http://en.wikipedia.org/wiki/Rickrolling" class="article">Last link</a></li>
+</ul>
+
+<!-- The script requires jQuery to work. It's been tested with versions 1.3.0 through 1.7.2. -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>	
+
+<!-- Load the Huge On Facebook script -->
+<script src="hof-1.3.js"></script>
+
+<!--
+
+Call the function and set the options. View the unminified script to see the full list of defaults and how to change them.
+
+If you pass a container #ID to hugeOnFacebook it will by default target all links within that container element:
+
+	$('#container_ID').hugeOnFacebook();
+
+If you pass an anchor tag .class to hugeOnFacebook, it will target all links of that class, regardless of their containing element:
+
+	$('.anchor_tag_class').hugeOnFacebook();
+
+Pass an #ID and use the hugeOnFacebook "linkClass" option to target a container element AND links of a certain class within it:
+
+	$('#container_ID').hugeOnFacebook({ linkClass: "anchor_tag_class" });
+
+
+-->
+<script>
+	$(document).ready(function() {
+		$('#headlines').hugeOnFacebook({
+			linkClass: "article",								// default: ""
+			likesVisible: true,									// default: false	
+			minLikes: 40,												// default: 10
+			hugeLikes: 5000,										// default: 50
+			addData: true,											// default: false
+			popClass: "popular",								// default: "popular"
+			hugeClass: "hugeonfacebook",				// default: "hugeonfacebook"
+			likesVisible: true,									// default: false
+			likesVisibleClass: "likesVisible"		// default: "likesVisible"
+		});
+	});
+</script>
+
+</body>
+</html>
