@@ -4,8 +4,8 @@ Huge on Facebook: a script to attach the number of Facebook likes to any list of
 http://gfscott.com/hof/
 Copyright (c) 2012 Graham F. Scott
 Licensed under the MIT License: http://opensource.org/licenses/mit-license
-Requires: jQuery 1.3.0 - 1.7.1
-Version: 1.3
+Requires: jQuery 1.3.0+ or Zepto 0.8+ 
+Version: 1.3.1
 No hotlinking scripts please!
 */
 
@@ -139,5 +139,4 @@ There are several user-configurable options which you can set when you call the 
 			// end .each() cycle	
 			});
 		};
-})( jQuery );
-
+})( window.jQuery || window.Zepto );
