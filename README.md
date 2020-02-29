@@ -1,3 +1,9 @@
+# ⚠️ Deprecation notice
+
+_February 2020_: Facebook’s Open Graph API no longer exposes the data necessary for this plugin to function, so I’m winding it down and archiving the repo. Something like [SharedCount](https://www.sharedcount.com/) is probably what you need.
+
+---
+
 Huge on Facebook
 ================
 
